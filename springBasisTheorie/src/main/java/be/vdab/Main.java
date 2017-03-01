@@ -17,7 +17,17 @@ class Main {
 			System.out.println(objectA.getKoersenURL());
 			System.out.println(objectA.getDefaultTaalEnLand().getDisplayName());
 			System.out.println("Bestand bestaat: " + objectA.getImportData().exists());
-			System.out.println(objectA.getDefaultBladRichting());	// enum geeft problemen
+			System.out.println(objectA.getDefaultBladRichting());	// enum geeft problemen als geen public
+			System.out.println("----------------------------------------------------");
+			
+			ClassB objectB = context.getBean(ClassB.class);
+			System.out.println(objectB.getTelefoonNrHelpDesk());
+			System.out.println(objectB.getAantalPogingenUpdateKlant());
+			System.out.println("----------------------------------------------------");
+			
+			System.out.println(context.getBean(HelpdeskMedewerkers.class));
+			System.out.println("----------------------------------------------------");
+
 		}
 
 	}

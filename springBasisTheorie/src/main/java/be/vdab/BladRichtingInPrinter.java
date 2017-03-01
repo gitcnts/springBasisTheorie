@@ -1,6 +1,6 @@
 package be.vdab;
 
-enum BladRichtingInPrinter {
+public enum BladRichtingInPrinter {
 
 	STAAND, LIGGEND;
 

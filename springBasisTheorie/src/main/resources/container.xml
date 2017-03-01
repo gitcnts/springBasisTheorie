@@ -9,7 +9,29 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 			value="http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml" />
 		<property name="defaultTaalEnLand" value="nl_BE" />
 		<property name="importData" value="c:/data/postcodes.txt" />
-<!-- 	<property name="defaultBladRichting" value="LIGGEND" />		 -->
+		<property name="defaultBladRichting" value="LIGGEND" />
 	</bean>
-	<bean id="classB" class="be.vdab.ClassB" />
+	<bean id="classB" class="be.vdab.ClassB">
+		<constructor-arg value="01/234.567.8" />
+		<constructor-arg value="3" />
+	</bean>
+	<bean id="helpdeskMedewerkers" class="be.vdab.HelpdeskMedewerkers">
+		<!-- <property name="namen"> -->
+		<!-- <set> -->
+		<!-- <value>Joe</value> -->
+		<!-- <value>Jack</value> -->
+		<!-- <value>William</value> -->
+		<!-- <value>Averell</value> -->
+		<!-- <value>Joe</value> een dubbele waarde -->
+		<!-- </set> -->
+		<!-- </property> -->
+		<constructor-arg>
+			<map>
+				<entry key="Joe" value="123" />
+				<entry key="Jack" value="456" />
+				<entry key="William" value="789" />
+				<entry key="Averell" value="012" />
+			</map>
+		</constructor-arg>
+	</bean>
 </beans>

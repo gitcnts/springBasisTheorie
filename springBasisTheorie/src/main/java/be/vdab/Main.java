@@ -18,6 +18,8 @@ class Main {
 			System.out.println(objectA.getDefaultTaalEnLand().getDisplayName());
 			System.out.println("Bestand bestaat: " + objectA.getImportData().exists());
 			System.out.println(objectA.getDefaultBladRichting());	// enum geeft problemen als geen public
+			System.out.println(objectA.getWebMasterEMailAdres());
+			System.out.println(objectA.getWebsiteGestart());
 			System.out.println("----------------------------------------------------");
 			
 			ClassB objectB = context.getBean(ClassB.class);

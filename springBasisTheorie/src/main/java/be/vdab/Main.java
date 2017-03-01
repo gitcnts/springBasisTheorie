@@ -29,6 +29,15 @@ class Main {
 			
 			System.out.println(context.getBean(HelpdeskMedewerkers.class));
 			System.out.println("----------------------------------------------------");
+			
+			context.getBean("teller1", Teller.class).verhoog();
+			context.getBean("teller1", Teller.class).verhoog();
+//			Teller teller2 = context.getBean("teller2", Teller.class);
+//			teller2.verhoog();
+// of rechtstreeks met onderstaande lijn:
+			context.getBean("teller2", Teller.class).verhoog();
+			context.getBean("teller2", Teller.class).verhoog();
+			System.out.println("----------------------------------------------------");
 
 		}
 
